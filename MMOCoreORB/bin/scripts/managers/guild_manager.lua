@@ -53,7 +53,7 @@ GuildUpdateInterval = 10080
 
 --The minimum number of members required
 --RequiredMembers = 2
-RequiredMembers = 5
+RequiredMembers = 2
 
 --The maximum number of members allowed
 MaximumMembers = 500
