@@ -51,8 +51,8 @@ object_draft_schematic_instrument_instrument_fanfar = object_draft_schematic_ins
    complexity = 14, 
    size = 1, 
 
-   xpType = "music", 
-   xp = 110, 
+   xpType = "dance", 
+   xp = 400, 
 
    assemblySkill = "instrument_assembly", 
    experimentingSkill = "general_experimentation", 
@@ -66,7 +66,7 @@ object_draft_schematic_instrument_instrument_fanfar = object_draft_schematic_ins
    ingredientTitleNames = {"frame", "valving"},
    ingredientSlotType = {0, 0},
    resourceTypes = {"metal", "metal"},
-   resourceQuantities = {40, 15},
+   resourceQuantities = {30, 15},
    contribution = {100, 100},
 
 
