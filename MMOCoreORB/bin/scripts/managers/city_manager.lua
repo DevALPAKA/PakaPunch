@@ -49,10 +49,10 @@ which carries forward this exception.
 	--------------------
 --]]
 --The amount of time in minutes before the city specialization may be changed again.
-CitySpecializationCooldown = 604800000
+CitySpecializationCooldown = 3600000
 
 --The amount of time in minutes before another withdrawal from the city treasury may be made.
-TreasuryWithdrawalCooldown = 86400000
+TreasuryWithdrawalCooldown = 60000
 
 --The number of city update cycles that must pass before mayoral voting process is complete.
 CityVotingCycles = 3
@@ -74,14 +74,14 @@ EnableCityWarn = false
 
 --The number of citizens required to achieve each city rank. (Outpost, Village, Township, City, Metropolis)
 --CitizensPerRank = {2, 4, 6, 8, 10}
-CitizensPerRank = {10, 20, 35, 55, 85}
+CitizensPerRank = {3, 6, 9, 12, 15}
 
 --The radius in meters of the city at each city rank. (Outpost, Village, Township, City, Metropolis)
-RadiusPerRank = {150, 200, 300, 400, 450}
+RadiusPerRank = {100, 200, 300, 400, 500}
 
 -- Maximum for each rank.  ex. rank 1 = DecorationsPerRank * 1, rank 5 = DecorationsPerRank * 5
 DecorationsPerRank = 10
-TrainersPerRank = 3
+TrainersPerRank = 7
 MissionTerminalsPerRank = 3
 
 -- Amount to discount city maintenance  float.  1 = 100%, .75 =75%, .5=50% etc
@@ -95,15 +95,15 @@ maintenanceDiscount = 1.0
 	The maximum amount of cities per rank is 255.
 --]]
 CitiesAllowed = {
-	{"corellia", {20, 20, 15, 10, 10}},
-	{"dantooine", {50, 50, 30, 20, 20}},
+	{"corellia", {10, 10, 10, 10, 10}},
+	{"dantooine", {20, 20, 20, 20, 20}},
 	{"dathomir", {0, 0, 0, 0, 0}},
 	{"endor", {0, 0, 0, 0, 0}},
-	{"lok", {50, 50, 30, 20, 20}},
-	{"naboo", {20, 20, 15, 10, 10}},
-	{"rori", {50, 50, 30, 20, 20}},
-	{"talus", {50, 50, 30, 20, 20}},
-	{"tatooine", {20, 20, 15, 10, 10}},
+	{"lok", {20, 20, 20, 20, 20}},
+	{"naboo", {10, 10, 10, 10, 10}},
+	{"rori", {20, 20, 20, 20, 20}},
+	{"talus", {20, 20, 20, 20, 20}},
+	{"tatooine", {10, 10, 10, 10, 10}},
 	{"yavin4", {0, 0, 0, 0, 0}}
 }
 
@@ -236,9 +236,17 @@ CitySpecializations = {
 	},
 	{--Stronghold
 		name = "@city/city:city_spec_stronghold",
-		cost = 150000,
+		cost = 350000,
 		skillMods = {
-			{"private_defense", 90}
+			{"private_defense", 90},
+			{"private_spec_samplesize", 20},
+			{"private_spec_samplerate", 10},
+			{"private_spec_assembly", 10},
+			{"private_medical_rating", 10},
+			{"private_spec_cloning", 20},
+			{"private_spec_experimentation", 15},
+			{"private_spec_missions", 15},
+			{"private_spec_entertainer", 10}
 		}
 	},
 }
